@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In / Register - SmartWize Connect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="auth-header">
+      <h1>Injira m'Umuryango</h1>
+    </header>
+
+    <section id="auth-form">
+      <div class="image-container">
+        <img src="Umucuruzi.jpeg" alt="Left Image" />
+      </div>
+      <div class="form-container">
+        <form action="dashboard.html" method="post">
+          <h4>Ufite konti</h4>
+
+          <label for="user-type">Hitamo:</label>
+          <select id="user-type" name="user_type" required>
+            <option value="seller">Umuhinzi</option>
+            <option value="buyer">Umuguzi</option>
+          </select>
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Andika email"
+            required
+          />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Andika password"
+            required
+          />
+
+          <button type="submit">Injira</button>
+
+          <p>Ntufite konti? <a href="signup.html">Iyandikishe hano</a></p>
+          <p><a href="index.html">Garuka Ahabanza</a></p>
+        </form>
+      </div>
+      <div class="image-container">
+        <img src="muzeheprice.jpeg" alt="Right Image" />
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

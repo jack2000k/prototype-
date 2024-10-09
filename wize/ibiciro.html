@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibiciro - PriceWize Connect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo">
+        <h1>PriceWize Connect</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Ahabanza</a></li>
+        <li><a href="prices.html">Ibiciro</a></li>
+        <li><a href="signin.html">Injira</a></li>
+        <li><a href="product-listing.html">Ibicuruzwa</a></li>
+      </ul>
+    </nav>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+      <label for="location-filter">Umujyi ushaka:</label>
+      <select id="location-filter">
+        <option value="all">Imijyi</option>
+        <option value="rubavu">Rubavu</option>
+        <option value="musanze">Musanze</option>
+        <option value="kigali">Kigali</option>
+        <option value="huye">Huye</option>
+        <option value="rusizi">Rusizi</option>
+      </select>
+
+      <label for="type-filter">Ubwoko ushaka:</label>
+      <select id="type-filter">
+        <option value="all">Amoko</option>
+        <option value="umweru">Umweru</option>
+        <option value="umutuku">Umutuku</option>
+        <option value="tungurusumu">Tungurusumu</option>
+      </select>
+
+      <button onclick="applyFilters()">Emeza</button>
+    </div>
+
+    <!-- Prices Section -->
+    <section id="price-list">
+      <h2>Ibiciro by'Ibitunguru mu bice bitandukanye</h2>
+      <div class="price-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Umujyi</th>
+              <th>Ubwoko bw'Ibitunguru</th>
+              <th>Igiciro (RWF)</th>
+              <th>Intera (Km)</th>
+            </tr>
+          </thead>
+          <tbody id="price-table-body">
+            <tr>
+              <td>Rubavu</td>
+              <td>Umweru</td>
+              <td>1,000 RWF</td>
+              <td>150 Km</td>
+            </tr>
+            <tr>
+              <td>Rubavu</td>
+              <td>Umutuku</td>
+              <td>1,200 RWF</td>
+              <td>150 Km</td>
+            </tr>
+            <tr>
+              <td>Rubavu</td>
+              <td>Tungurusumu</td>
+              <td>2,000 RWF</td>
+              <td>150 Km</td>
+            </tr>
+            <tr>
+              <td>Musanze</td>
+              <td>Umweru</td>
+              <td>1,100 RWF</td>
+              <td>80 Km</td>
+            </tr>
+            <tr>
+              <td>Musanze</td>
+              <td>Umutuku</td>
+              <td>1,300 RWF</td>
+              <td>80 Km</td>
+            </tr>
+            <tr>
+              <td>Musanze</td>
+              <td>Tungurusumu</td>
+              <td>2,200 RWF</td>
+              <td>80 Km</td>
+            </tr>
+            <tr>
+              <td>Kigali</td>
+              <td>Umweru</td>
+              <td>1,200 RWF</td>
+              <td>0 Km</td>
+            </tr>
+            <tr>
+              <td>Kigali</td>
+              <td>Umutuku</td>
+              <td>1,400 RWF</td>
+              <td>0 Km</td>
+            </tr>
+            <tr>
+              <td>Kigali</td>
+              <td>Tungurusumu</td>
+              <td>2,400 RWF</td>
+              <td>0 Km</td>
+            </tr>
+            <tr>
+              <td>Huye</td>
+              <td>Umweru</td>
+              <td>1,150 RWF</td>
+              <td>130 Km</td>
+            </tr>
+            <tr>
+              <td>Huye</td>
+              <td>Umutuku</td>
+              <td>1,350 RWF</td>
+              <td>130 Km</td>
+            </tr>
+            <tr>
+              <td>Huye</td>
+              <td>Tungurusumu</td>
+              <td>2,300 RWF</td>
+              <td>130 Km</td>
+            </tr>
+            <tr>
+              <td>Rusizi</td>
+              <td>Umweru</td>
+              <td>1,300 RWF</td>
+              <td>240 Km</td>
+            </tr>
+            <tr>
+              <td>Rusizi</td>
+              <td>Umutuku</td>
+              <td>1,500 RWF</td>
+              <td>240 Km</td>
+            </tr>
+            <tr>
+              <td>Rusizi</td>
+              <td>Tungurusumu</td>
+              <td>2,600 RWF</td>
+              <td>240 Km</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Distance Calculator Section -->
+    <div class="distance-calculator">
+      <label for="user-location">Aho ushaka:</label>
+      <input type="text" id="user-location" placeholder="e.g., Nyamata" />
+      <button onclick="calculateDistance()">Reba Intera</button>
+      <p id="distance-result"></p>
+    </div>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+      <h3>Ubuhamya bw'Abakiriya</h3>
+      <div class="review" id="review-section">
+        <p>
+          "Ibiciro by'i Rubavu biri hasi cyane kandi bitunganye." - Umukiriya
+          <strong>Nsengiyumva John</strong>
+        </p>
+      </div>
+      <button onclick="leaveReview()">Andika Ubuhamya</button>
+    </section>
+
+    <!-- Price Alert Subscription -->
+    <div class="price-alert">
+      <label for="email">Subscribe for Price Alerts:</label>
+      <input type="email" id="email" placeholder="Andika Email" />
+      <button onclick="subscribeAlert()">Subscribe</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-links">
+        <a href="#about">Abo turibo</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">FAQs</a>
+      </div>
+      <p>&copy; 2024 PriceWize Connect. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Apply filters to the price list
+      function applyFilters() {
+        const locationFilter = document.getElementById("location-filter").value;
+        const typeFilter = document.getElementById("type-filter").value;
+        const rows = document.querySelectorAll("#price-table-body tr");
+
+        rows.forEach((row) => {
+          const city = row.cells[0].innerText.toLowerCase();
+          const type = row.cells[1].innerText.toLowerCase();
+          const showRow =
+            (locationFilter === "all" || city === locationFilter) &&
+            (typeFilter === "all" || type === typeFilter);
+          row.style.display = showRow ? "" : "none";
+        });
+      }
+
+      // Calculate the distance from the user location to the listed locations
+      function calculateDistance() {
+        const userLocation = document.getElementById("user-location").value;
+        const distances = {
+          rubavu: "150 Km",
+          musanze: "80 Km",
+          kigali: "0 Km",
+          huye: "130 Km",
+          rusizi: "240 Km",
+        };
+
+        const lowerCaseLocation = userLocation.toLowerCase();
+        const distanceResult =
+          distances[lowerCaseLocation] || "Location not found.";
+        document.getElementById("distance-result").innerText = distanceResult;
+      }
+
+      // Leave a review
+      function leaveReview() {
+        const reviewSection = document.getElementById("review-section");
+        const newReview = prompt("Andika Ubuhamya (Review):");
+        const name = prompt("Andika Izina ryawe (Your Name):");
+
+        if (newReview && name) {
+          const reviewDiv = document.createElement("div");
+          reviewDiv.classList.add("review");
+          reviewDiv.innerHTML = `<p>"${newReview}" - Umukiriya <strong>${name}</strong></p>`;
+          reviewSection.appendChild(reviewDiv);
+        }
+      }
+
+      // Subscribe for price alerts
+      function subscribeAlert() {
+        const email = document.getElementById("email").value;
+        if (email) {
+          alert(`You have subscribed for price alerts with email: ${email}`);
+          document.getElementById("email").value = ""; // Clear the input
+        } else {
+          alert("Please enter a valid email address.");
+        }
+      }
+    </script>
+  </body>
+</html>

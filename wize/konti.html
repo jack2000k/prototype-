@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>My Account</title>
+  </head>
+  <body class="main-body">
+    <!-- Added a class for potential future use -->
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo">
+        <h1>PriceWize Connect</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Ahabanza</a></li>
+        <li><a href="product-listing.html">Ibicuruzwa</a></li>
+        <li><a href="sohoka.html">Sohoka</a></li>
+      </ul>
+    </nav>
+
+    <!-- Account Section -->
+    <section id="my-account">
+      <h2>Konti Yanjye</h2>
+      <div class="account-container">
+        <!-- Profile Picture -->
+        <div class="profile-picture">
+          <img src="Irumva Jerome.jpg" alt="Profile Picture" />
+        </div>
+
+        <!-- Account Info -->
+        <div class="account-info">
+          <p><strong>Amazina:</strong> Irumva Jerome</p>
+          <p>
+            <strong>Email:</strong> <em id="email">jeromeirumva@gmail.com</em>
+          </p>
+          <p><strong>Ubunyamuryango:</strong> zahabu</p>
+          <p><strong>Yatangiye:</strong> August 10, 2024</p>
+
+          <!-- Edit Profile Button -->
+          <button onclick="window.location.href='editProfile.html'">
+            Edit Profile
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

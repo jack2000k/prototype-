@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your CSS file -->
+  </head>
+  <body class="hose">
+    <!-- ----------------------------------------------
+         Product Listings Page 
+         ---------------------------------------------- -->
+    <header>
+      <nav class="navbar">
+        <a href="index.html">Ahabanza</a>
+        <a href="cart.html">Ibyongura</a>
+        <a href="konti.html">Konti</a>
+        <a href="sohoka.html">Sohoka</a>
+      </nav>
+    </header>
+
+    <div id="products">
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Shakisha ibicuruzwa..."
+        />
+        <button type="button" id="searchButton">Shakisha</button>
+      </div>
+
+      <!-- Sort By Feature -->
+      <div class="sort-container">
+        <label for="sortSelect">Reba:</label>
+        <select id="sortSelect">
+          <option value="products">Byose</option>
+          <option value="distance">Hafi</option>
+          <option value="priceLowToHigh">Ibihenze</option>
+          <option value="priceHighToLow">Ibihendutse</option>
+        </select>
+      </div>
+
+      <h2>Ibicuruzwa</h2>
+
+      <!-- Product Listing -->
+      <div class="product-list">
+        <div class="product color1">
+          <h3>Ibitunguru by'umutuku</h3>
+          <p class="price">1000 RWF</p>
+          <img src="red onions22.png" alt="Product 1" />
+          <button class="add-to-cart">Ongera kuby'ugura</button>
+        </div>
+        <div class="product color2">
+          <h3>Ibitunguru by'umweru</h3>
+          <p class="price">1500 RWF</p>
+          <img src="brown onions.jpeg" alt="Ibitunguru by'umweru" />
+          <button class="add-to-cart">Ongera kuby'ugura</button>
+        </div>
+        <div class="product color3">
+          <h3>Tungurusumu</h3>
+          <p class="price">2000 RWF</p>
+          <img src="garlics22.png" alt="Product 3" />
+          <button class="add-to-cart">Ongera kuby'ugura</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
